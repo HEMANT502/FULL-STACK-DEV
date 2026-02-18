@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hotel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 60%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        input, select {
+            width: 95%;
+            padding: 8px;
+            margin: 4px 0;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotel Booking Form</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="fullname" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone" required></td>
+            </tr>
+            <tr>
+                <td>Check-in Date:</td>
+                <td><input type="date" name="checkin" required></td>
+            </tr>
+            <tr>
+                <td>Check-out Date:</td>
+                <td><input type="date" name="checkout" required></td>
+            </tr>
+            <tr>
+                <td>Room Type:</td>
+                <td>
+                    <select name="roomtype" required>
+                        <option value="">--Select--</option>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Number of Guests:</td>
+                <td><input type="number" name="guests" min="1" max="10" required></td>
+            </tr>
+            <tr>
+                <td>Special Requests:</td>
+                <td><input type="text" name="requests"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit" value="Book Now" class="submit-btn">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
